@@ -9,6 +9,7 @@ export class AppController {
 
   @Post('payment')
   async createPayment(@Body() request: CreatePaymentDto): Promise<Payment> {
+    // test
     return this.appService.createPayment(request);
   }
 }
