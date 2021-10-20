@@ -17,13 +17,4 @@ async function bootstrap() {
   await app.listen(port);
   return port;
 }
-bootstrap().then((port) => {
-  Logger.log(
-    `Document setup on: http://localhost:${port}/${process.env.DOCS_PATH}`,
-    'NestApplication',
-  );
-  return Logger.log(
-    `Application started at: http://localhost:${port}/${process.env.BASE_PATH}`,
-    'NestApplication',
-  );
-});
+bootstrap();
